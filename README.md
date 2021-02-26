@@ -10,3 +10,7 @@ The libraries used in this project are [OpenCV](https://docs.opencv.org/master/d
 sudo apt-get install python3-opencv
 pip install pynput
 ```
+## Usage
+```bash
+python3 objectTracking.py
+```
