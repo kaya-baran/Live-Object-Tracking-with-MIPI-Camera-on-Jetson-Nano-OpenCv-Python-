@@ -8,7 +8,5 @@ The libraries used in this project are [OpenCV](https://docs.opencv.org/master/d
 
 ```bash
 sudo apt-get install python3-opencv
-```
-```bash
 pip install pynput
 ```
