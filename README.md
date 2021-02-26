@@ -1,6 +1,6 @@
 # ObjectTracker
 
-ObjectTracker is a Python library for dealing with tracking objects on live frames and enables features that you can select and track any object any time.
+ObjectTracker is a Python library for dealing with tracking objects on live frames(MIPI Camera) and enables features that you can select and track any object any time.
 
 ## Libraries and Installation
 
