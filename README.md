@@ -4,5 +4,11 @@ ObjectTracker is a Python library for dealing with tracking objects on live fram
 
 ## Libraries and Installation
 
-The libraries used in this project are [openCV](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html) and [pynput](https://pypi.org/project/pynput/).
+The libraries used in this project are [OpenCV](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html) and [pynput](https://pypi.org/project/pynput/).
 
+```bash
+sudo apt-get install python3-opencv
+```
+```bash
+pip install pynput
+```
