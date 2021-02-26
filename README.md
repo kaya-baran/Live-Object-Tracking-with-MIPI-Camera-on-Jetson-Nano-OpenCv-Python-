@@ -23,10 +23,10 @@ pipeline = "nvarguscamerasrc sensor-id=0 bufapi-version=1 ! video/x-raw(memory:N
 ## Functions
 In this code, we have 4 thread objects running together.
 
-### on_click Thread
+### on_click Listener
 The function on_click enables us to select the 2 diagonally oriented corners of our boundingBox.
 
-### on_functionf8andf7 Thread
+### on_functionf8andf7 Listener
 With the help of on_functionf8andf7, we can start determining corners of boundingBox. First corner is the last point clicked on the image before pressing F8 ; and the second corner is the next point clicked on the image after pressing F8. 
 
 Then there is F7 button that enables us to select a new bounding box when there is a tracker on the image already. Double-clicking F7 button resets the bounding box and the first function with F8 can be repeated for creating a new tracker and tracking another object.
@@ -34,8 +34,11 @@ Then there is F7 button that enables us to select a new bounding box when there 
 ### coordLister Thread
 This function takes the coordinates that determined by the on_click and on_functionf8andf7, and send it to boundingBox() function to create the bounding box and provides a start for the conditions in the while loop.
 
+## Main Thread
+Main thread is responsible for frame capture, bounding box rendering and tracker update. All other threads and listeners are being initialized here. 
+
 ## Offset
-You can see that there is offset in boundingBox() function, which is because of location of the video output on the screen. Upper-left corner of the video output is not at the corner of the screen, so to optimize it, adding offset according to the location of video output in your screen will work. 
+You can see that there is offset in boundingBox() function, which is because of the location of the video output on the screen. The mouse listener that I use is working with the principle of the pixel coordinates on the screen. Coordinates of the upper corner of the screen is (0,0); however, the video output appeared on the screen is not starting at (0,0), but at (66,53) for my screen.  In order to optimize it, adding offset according to the location of video output in your screen will work. 
 
 
 ![Here](Images/offset.png)
