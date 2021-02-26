@@ -14,3 +14,7 @@ pip install pynput
 ```bash
 python3 objectTracking.py
 ```
+## Functions
+In this code, we have 4 thread objects running together.
+
+### on_click Thread
