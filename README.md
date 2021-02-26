@@ -14,6 +14,12 @@ pip install pynput
 ```bash
 python3 objectTracking.py
 ```
+## MIPI Camera Input
+In order to use MIPI camera input on OpenCV, I created a Gstreamer pipeline which captures frames from MIPI Camera utilizing nvarguscamerasrc plugin. 
+```python
+pipeline = "nvarguscamerasrc sensor-id=0 bufapi-version=1 ! video/x-raw(memory:NVMM), width=(int)1280,height=(int)720, \
+            format=(string)NV12 ! nvvideoconvert ! videoflip method=2 ! videoconvert n-threads=2 ! appsink"
+ ```
 ## Functions
 In this code, we have 4 thread objects running together.
 
@@ -40,4 +46,4 @@ Here, you can see where the video is located in my screen.
 After following the steps that I told, you should see a bounding box arounda the object you selected, and it wil appear until the camera lose the object from its sight. Then, you can select another object that you want to track.
 
 ## Improvements
-If you wish, you can add a failCounter to the loop so that the program do not lose the object in just one frame that object cannot be detected.
+If you wish, you can add a counter to the loop so that the program do not lose the object in just one frame that object cannot be detected.
