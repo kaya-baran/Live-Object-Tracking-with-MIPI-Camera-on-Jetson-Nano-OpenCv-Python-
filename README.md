@@ -30,8 +30,8 @@ This function takes the coordinates that determined by the on_click and on_funct
 
 ## Offset
 
-You can see that there is offset in boundingBox() function, which is because of location of the video output on the screen. Upper-left corner of the video output is not at the corner of the screen, so to optimize it, adding offset according to the location of video output in your screen will work.
-![offset](Images/offset.png)
+You can see that there is offset in boundingBox() function, which is because of location of the video output on the screen. Upper-left corner of the video output is not at the corner of the screen, so to optimize it, adding offset according to the location of video output in your screen will work. ![Here](Images/offset.png), , you can see where the video is located in my screen.
+
 
 
 
