@@ -29,7 +29,6 @@ Then there is F7 button that enables us to select a new bounding box when there 
 This function takes the coordinates that determined by the on_click and on_functionf8andf7, and send it to boundingBox() function to create the bounding box and provides a start for the conditions in the while loop.
 
 ## Offset
-
 You can see that there is offset in boundingBox() function, which is because of location of the video output on the screen. Upper-left corner of the video output is not at the corner of the screen, so to optimize it, adding offset according to the location of video output in your screen will work. 
 
 
@@ -37,6 +36,8 @@ You can see that there is offset in boundingBox() function, which is because of 
 
 Here, you can see where the video is located in my screen.
 
+## Expected Output
+After following the steps that I told, you should see a bounding box arounda the object you selected, and it wil appear until the camera lose the object from its sight. Then, you can select another object that you want to track.
 
-
-
+## Improvements
+If you wish, you can add a failCounter to the loop so that the program do not lose the object in just one frame that object cannot be detected.
