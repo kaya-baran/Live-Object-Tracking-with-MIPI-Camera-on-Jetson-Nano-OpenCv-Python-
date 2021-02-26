@@ -8,7 +8,7 @@ The libraries used in this project are [OpenCV](https://docs.opencv.org/master/d
 
 ```bash
 sudo apt-get install python3-opencv
-pip install pynput
+pip3 install pynput
 ```
 I also added these configurations of OpenCV:
 
